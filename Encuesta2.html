@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestieVibes - 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/logo11.png" alt="Imagen Persona 2">
+    </div>
+    <div class="survey-window">
+        <h2 id="title2">Ingresa tu nombre</h2>
+        <div id="nameSection2">
+            <input  class="nombretexto" type="text" id="name2" placeholder="Nombre">
+            
+
+           <button class="golden" onclick="startSurvey(2)">Comenzar</button>
+
+        </div>
+        <div id="questionSection2" class="question-section" style="display: none;">
+            <p id="question2"></p>
+            <div class='py'>
+                <label><input type="radio" class="option-input radio" name="answer2" value="Sí" checked> Sí</label>
+                <label><input type="radio" class="option-input radio" name="answer2" value="No"> No</label>
+                </div>
+           <div class="buttons">
+                <button class="golden" onclick="prevQuestion(2)">Anterior</button>
+                <button class="golden" onclick="nextQuestion(2)">Siguiente</button>
+            </div>
+        </div>
+        <div id="waiting2" class="waiting" style="display: none;">
+            Esperando a que la otra persona termine la encuesta...
+        </div>
+        <button id="restartBtn2" onclick="restartSurvey(2)" style="display: none;">Reiniciar Encuesta</button>
+    </div>
+    <div id="comparison"></div>
+    <div id="results" style="display: none;">
+        <div id="updateSection2" style="display: none;">
+            <button onclick="updateData()">Actualizar Datos</button>
+            <button onclick="compareData()">Recompesa</button>
+            <!--<button onclick="printTicket()">Imprimir</button>-->
+        </div>
+        <table id="answersTable">
+            <tr>
+                <th>Pregunta</th>
+                <th>Persona 1</th>
+                <th>Persona 2</th>
+            </tr>
+        </table>
+        <div id="actionButtons2" style="margin-top: 10px;">
+            <button class="golden" onclick="updateData()">Actualizar Datos</button>
+            <button class="golden" onclick="compareData()">Recompesa</button>
+            <!-- <button onclick="printTicket()">Imprimir</button> -->
+        </div>
+    </div>
+</div>
+<div class="container">
+  <div class="col">
+    <div class="heart heart1">
+      <div class="circle"></div>
+      <div class="halfMoon"></div>
+    </div>	
+  </div>
+  <div class="col">
+    <div class="heart heart2">
+      <div class="circle"></div>
+      <div class="halfMoon"></div>
+    </div>	
+  </div>
+  <div class="col">
+    <div class="heart heart3">
+      <div class="circle"></div>
+      <div class="halfMoon"></div>
+    </div>	
+  </div>
+  <div class="col">
+    <div class="heart heart4">
+      <div class="circle"></div>
+      <div class="halfMoon"></div>
+    </div>	
+  </div>
+  <div class="col">
+    <div class="heart heart5">
+      <div class="circle"></div>
+      <div class="halfMoon"></div>
+    </div>	
+  </div>
+</div>
+<script src="js/script.js"></script>
+<script src="js/script2.js"></script>
+</body>
+</html>

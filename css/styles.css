@@ -1,0 +1,334 @@
+body {
+    /*font-family: Arial, sans-serif;
+    margin: 0px;
+    background:black;
+    font-size: 40px;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 0;
+    color: white;
+    background-image: url('PORTADA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; /* Asegura que el cuerpo ocupe toda la altura del viewport */
+
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Elimina scroll horizontal y vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  background-color: #000000; /* Puedes cambiar el color de fondo */
+}
+
+
+
+
+
+
+.image-container {
+    /*text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro del contenedor */
+    align-items: center; /* Centra la imagen dentro del contenedor */
+    /width: 10%; / Ancho del contenedor */
+    height: 70%; /* Altura del contenedor */
+
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+
+
+}
+
+.index-container{
+    
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+.nombretexto{
+    width: 50%;
+    height: 30px;
+    font-size: 32px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+.ticket-window {
+    text-align: center;
+    margin: 20px;
+    font-size: 120%;
+}
+.nameSection1{
+    font-size: 900px;
+}
+
+.survey-window {
+   /* text-align: center;
+    margin: 0 auto;
+    /width: 300px;/
+    color: white;
+    font-size: 50px;*/
+
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+font-size: 50px;	
+
+}
+
+.question-section {
+    display: none;
+    font-size:60px ;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.waiting {
+    color: red;
+    font-weight: bold;
+}
+
+#results {
+    margin-top: 100px;
+    /width: 170vw;/
+}
+
+table {
+    width: 100%;
+   /* border-collapse: collapse;*/
+}
+
+th  {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+}
+
+td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    color:black;
+    font-size: 15px;
+}
+
+.actionButtons1{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+}
+
+.compatible {
+    background-color: #c8e6c9;
+}
+
+.incompatible {
+    background-color: #ffcdd2;
+}
+
+#comparison {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: rgba(255, 215, 0, 1);
+    color: white;
+    border: none;
+    border-radius: 13px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2a64af;
+}
+
+button.secondary {
+    background-color: #008CBA;
+}
+
+button.secondary:hover {
+    background-color: #0073a3;
+}
+
+/* fondo de corazones */
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #ffd700;
+}
+.option-input:checked {
+  background: #ffd700;
+}
+.option-input:checked::before {
+  width: 40px;
+  height: 40px;
+  display:flex;
+  content: '\f00c';
+  font-size: 0px;
+  font-weight:bold;
+  position: absolute;
+  align-items:center;
+  justify-content:center;
+  font-family:'Font Awesome 5 Free';
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #dd1b1b;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+/* termina corazon */
+
+/* 🔥 Botón dorado brillante circular */
+button.golden {
+  
+  height: 100px;
+  
+  background: linear-gradient(145deg, #FFD700, #FFA500);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: brillo 2s infinite ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+@keyframes brillo {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(255, 215, 0, 0.8),
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 30px rgba(255, 215, 0, 0.4),
+      inset 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(255, 215, 0, 1),
+      0 0 30px rgba(255, 215, 0, 0.8),
+      0 0 40px rgba(255, 215, 0, 0.6),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+
+
+***************************************************
+
+
+
+button.golden {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #FFD700, #FFA500);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: brillo 2s infinite ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+@keyframes brillo {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(255, 215, 0, 0.8),
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 30px rgba(255, 215, 0, 0.4),
+      inset 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(255, 215, 0, 1),
+      0 0 30px rgba(255, 215, 0, 0.8),
+      0 0 40px rgba(255, 215, 0, 0.6),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}

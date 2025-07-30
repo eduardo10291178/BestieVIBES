@@ -1,0 +1,92 @@
+.ticket {
+    /*width: 30%;
+    max-width: 600px;*/
+    width: 79.5mm; /* Ancho del ticket en mm */
+    max-width: 100%; /* Asegura que no se exceda el ancho de la pantalla */
+  text-align: center;
+    margin: 0px auto;
+    background-color: white;
+    /*border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;*/
+    /*font-size: 15px;*/
+}
+
+.header11 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header11 .logo {
+    margin-bottom: 1px;
+}
+
+.header11 .logo img  {
+    width: 270px; /* Ajustar el tamaño de las imágenes según sea necesario */
+    /*margin-right: 10px;*/
+}
+
+.headerA11 .logoA img  {
+    width: 317px; /* Ajustar el tamaño de las imágenes según sea necesario */
+    margin-right: 10px;
+}
+
+
+.logo1{
+    width: 230px; /* Ajustar el tamaño de las imágenes según sea necesario */
+    margin-right: 10px;
+}
+
+.logo99 {
+    width: 20px; /* Ajustar el tamaño de las imágenes según sea necesario */
+
+}
+
+.title {
+    background-color: black;
+    color: white;
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+h2{
+    font-size: 35px;
+}
+
+.compatibleee{
+    font-size: 30px;
+}
+
+.beerbar
+{
+    font-size: 27px;
+}
+
+.date {
+    margin-bottom: 10px;
+}
+
+.content {
+   /* text-align: center;*/
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    margin-bottom: 20px;
+}
+
+.results {
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}

@@ -1,0 +1,21 @@
+.indexmenu {
+   /* font-family: Arial, sans-serif;
+    margin: 0px;
+    background:black;
+    font-size: 40px;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 0;*/
+    background-image: url('../img/portada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; /* Asegura que el cuerpo ocupe toda la altura del viewport */
+
+   /*display: flex;
+    justify-content: center; /* Centra horizontalmente */
+   /* align-items: center; /* Centra verticalmente */
+
+
+   }
