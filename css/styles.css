@@ -1,197 +1,161 @@
 body {
-    /*font-family: Arial, sans-serif;
-    margin: 0px;
-    background:black;
-    font-size: 40px;
-    margin-top: 10%;
-    margin-right: 10%;
-    margin-left: 10%;
-    padding: 0;
-    color: white;
-    background-image: url('PORTADA.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh; /* Asegura que el cuerpo ocupe toda la altura del viewport */
-
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Elimina scroll horizontal y vertical */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: sans-serif;
-  background-color: #000000; /* Puedes cambiar el color de fondo */
+  background-color: #000000;
 }
 
-
-
-
-
-
 .image-container {
-    /*text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center; /* Centra la imagen dentro del contenedor */
-    align-items: center; /* Centra la imagen dentro del contenedor */
-    /width: 10%; / Ancho del contenedor */
-    height: 70%; /* Altura del contenedor */
-
   max-width: 100%;
   max-height: 100%;
   box-sizing: border-box;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.index-container{
-    
+.index-container {
+  text-align: center;
+  width: 100%;
 }
 
 .buttons-container {
-    text-align: center;
+  text-align: center;
+  width: 100%;
 }
 
-.nombretexto{
-    width: 50%;
-    height: 30px;
-    font-size: 32px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    resize: none;
+.nombretexto {
+  width: 80%;
+  max-width: 400px;
+  height: 40px;
+  font-size: 28px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  box-sizing: border-box;
 }
+
 .ticket-window {
-    text-align: center;
-    margin: 20px;
-    font-size: 120%;
+  text-align: center;
+  margin: 20px;
+  font-size: 120%;
 }
-.nameSection1{
-    font-size: 900px;
+
+.nameSection1 {
+  font-size: 40px;
 }
 
 .survey-window {
-   /* text-align: center;
-    margin: 0 auto;
-    /width: 300px;/
-    color: white;
-    font-size: 50px;*/
-
   max-width: 100%;
-  max-height: 100%;
   box-sizing: border-box;
   color: #ffffff;
-font-size: 50px;	
-
+  font-size: 50px;
+  text-align: center;
 }
 
 .question-section {
-    display: none;
-    font-size:60px ;
+  display: none;
+  font-size: 40px;
 }
 
 .buttons {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .waiting {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
 
 #results {
-    margin-top: 100px;
-    /width: 170vw;/
+  margin-top: 50px;
+  width: 100%;
+  overflow-x: auto;
 }
 
 table {
-    width: 100%;
-   /* border-collapse: collapse;*/
+  width: 100%;
 }
 
-th  {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-    color:white;
-    font-size: 20px;
+th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
 }
 
-td{
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-    color:black;
-    font-size: 15px;
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  color: black;
+  font-size: 15px;
 }
 
-.actionButtons1{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100vh;
+.actionButtons1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-wrap: wrap;
 }
 
 .compatible {
-    background-color: #c8e6c9;
+  background-color: #c8e6c9;
 }
 
 .incompatible {
-    background-color: #ffcdd2;
+  background-color: #ffcdd2;
 }
 
 #comparison {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-top: 20px;
-    color: white;
-    text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
 }
 
-/* Estilos para los botones */
+/* BOTONES */
 button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 30px;
-    cursor: pointer;
-    background-color: rgba(255, 215, 0, 1);
-    color: white;
-    border: none;
-    border-radius: 13px;
-    transition: background-color 0.3s;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: rgba(255, 215, 0, 1);
+  color: white;
+  border: none;
+  border-radius: 13px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #2a64af;
+  background-color: #2a64af;
 }
 
 button.secondary {
-    background-color: #008CBA;
+  background-color: #008CBA;
 }
 
 button.secondary:hover {
-    background-color: #0073a3;
+  background-color: #0073a3;
 }
 
-/* fondo de corazones */
+/* INPUT TIPO CORAZÓN */
 .option-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
   appearance: none;
   position: relative;
-  top: 13.33333px;
-  right: 0;
-  bottom: 0;
-  left: 0;
   height: 40px;
   width: 40px;
-  transition: all 0.15s ease-out 0s;
   background: #cbd1d8;
   border: none;
   color: #fff;
@@ -199,30 +163,28 @@ button.secondary:hover {
   display: inline-block;
   margin-right: 0.5rem;
   outline: none;
-  position: relative;
   z-index: 1000;
 }
-.option-input:hover {
-  background: #ffd700;
-}
+
+.option-input:hover,
 .option-input:checked {
   background: #ffd700;
 }
+
 .option-input:checked::before {
   width: 40px;
   height: 40px;
-  display:flex;
+  display: flex;
   content: '\f00c';
   font-size: 0px;
-  font-weight:bold;
+  font-weight: bold;
   position: absolute;
-  align-items:center;
-  justify-content:center;
-  font-family:'Font Awesome 5 Free';
+  align-items: center;
+  justify-content: center;
+  font-family: 'Font Awesome 5 Free';
 }
+
 .option-input:checked::after {
-  -webkit-animation: click-wave 0.65s;
-  -moz-animation: click-wave 0.65s;
   animation: click-wave 0.65s;
   background: #dd1b1b;
   content: '';
@@ -230,9 +192,11 @@ button.secondary:hover {
   position: relative;
   z-index: 100;
 }
+
 .option-input.radio {
   border-radius: 50%;
 }
+
 .option-input.radio::after {
   border-radius: 50%;
 }
@@ -242,7 +206,6 @@ button.secondary:hover {
     height: 40px;
     width: 40px;
     opacity: 0.35;
-    position: relative;
   }
   100% {
     height: 200px;
@@ -252,51 +215,8 @@ button.secondary:hover {
     opacity: 0;
   }
 }
-/* termina corazon */
 
-/* 🔥 Botón dorado brillante circular */
-button.golden {
-  
-  height: 100px;
-  
-  background: linear-gradient(145deg, #FFD700, #FFA500);
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow:
-    0 0 10px rgba(255, 215, 0, 0.8),
-    0 0 20px rgba(255, 215, 0, 0.6),
-    0 0 30px rgba(255, 215, 0, 0.4),
-    inset 0 0 10px rgba(255, 255, 255, 0.3);
-  animation: brillo 2s infinite ease-in-out;
-  transition: transform 0.2s ease;
-}
-
-@keyframes brillo {
-  0%, 100% {
-    box-shadow:
-      0 0 10px rgba(255, 215, 0, 0.8),
-      0 0 20px rgba(255, 215, 0, 0.6),
-      0 0 30px rgba(255, 215, 0, 0.4),
-      inset 0 0 10px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    box-shadow:
-      0 0 20px rgba(255, 215, 0, 1),
-      0 0 30px rgba(255, 215, 0, 0.8),
-      0 0 40px rgba(255, 215, 0, 0.6),
-      inset 0 0 15px rgba(255, 255, 255, 0.4);
-  }
-}
-
-
-
-***************************************************
-
-
-
+/* BOTÓN DORADO BRILLANTE */
 button.golden {
   width: 100px;
   height: 100px;
@@ -330,5 +250,41 @@ button.golden {
       0 0 30px rgba(255, 215, 0, 0.8),
       0 0 40px rgba(255, 215, 0, 0.6),
       inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nombretexto {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .survey-window {
+    font-size: 28px;
+  }
+
+  .question-section {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  .ticket-window {
+    font-size: 16px;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  .golden {
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
   }
 }
