@@ -1,19 +1,19 @@
 const questions = [
-    "1 - 10 ¿Alguna vez has traicionado la confianza de alguien cercano contando un secreto o chisme?",
-    "2 - 10 ¿Has sentido enojo tan fuerte que quisiste romper algo o gritarle a alguien? ",
-    "3 - 10 ¿Has sido testigo o cómplice de una infidelidad y no lo contaste? ",
-    "4 - 10 ¿Has usado palabras vulgares con intención de ofender a alguien en una discusión? ",
-    "5 - 10 ¿Has hablado mal de alguien a sus espaldas y luego fingido llevarte bien? ",
-    "6 - 10 ¿Te has sentido celoso(a) sin razón, solo por ver a alguien hablar con la persona que te gusta? ",
-    "7 - 10 ¿Alguna vez te han dado celos de una amistad muy cercana de tu pareja o ex? ",
-    "8 - 10 ¿Has sido tan directo(a) o atrevido(a) con alguien que sentiste que te pasaste de descarado(a)? ",
-    "9 - 10 ¿Has tenido una discusión tan intensa con alguien que mezcló enojo y atracción al mismo tiempo? ",
-    "10 - 10 ¿Eres team frio? "
+    "1 -  ¿Alguna vez has traicionado la confianza de alguien cercano contando un secreto o chisme?",
+    "2 -  ¿Has sentido enojo tan fuerte que quisiste romper algo o gritarle a alguien? ",
+    "3 - ¿Has sido testigo o cómplice de una infidelidad y no lo contaste? ",
+    "4 - ¿Has usado palabras vulgares con intención de ofender a alguien en una discusión? ",
+    "5 - ¿Has hablado mal de alguien a sus espaldas y luego fingido llevarte bien? ",
+    "6 - ¿Te has sentido celoso(a) sin razón, solo por ver a alguien hablar con la persona que te gusta? ",
+    "7 - ¿Alguna vez te han dado celos de una amistad muy cercana de tu pareja o ex? ",
+    "8 - ¿Has sido tan directo(a) o atrevido(a) con alguien que sentiste que te pasaste de descarado(a)? ",
+    "9 - ¿Has tenido una discusión tan intensa con alguien que mezcló enojo y atracción al mismo tiempo? ",
+    "10 -¿Eres team frío? "
 ];
 
-let currentQuestionIndex = [0, 0];  // Index for both persons
-let answers = [[], []];  // Answers for both persons
-let names = ['', ''];  // Names for both persons
+let currentQuestionIndex = [0, 0];
+let answers = [[], []];
+let names = ['', ''];
 let waitingInterval;
 
 function startSurvey(person) {
@@ -25,7 +25,7 @@ function startSurvey(person) {
 
     names[person - 1] = name;
     document.getElementById(`title${person}`).innerText = name;
-    document.querySelector('.image-container').style.display = 'none'; // Ocultar la imagen
+    document.querySelector('.image-container').style.display = 'none';
     document.getElementById(`nameSection${person}`).style.display = 'none';
     document.getElementById(`questionSection${person}`).style.display = 'block';
     loadQuestion(person);
@@ -77,42 +77,11 @@ function prevQuestion(person) {
     }
 }
 
+// ✅ FUNCIONALIDAD ACTUALIZADA: Solo redirige a index.html
 function restartSurvey(person) {
-    currentQuestionIndex[person - 1] = 0;
-    answers[person - 1] = [];
-    names[person - 1] = '';
-    document.getElementById(`title${person}`).innerText = `Ingresa tu nombre para empezar:`;
-    document.getElementById(`name${person}`).value = '';
-    document.getElementById(`nameSection${person}`).style.display = 'block';
-    document.getElementById(`questionSection${person}`).style.display = 'none';
-    document.getElementById(`restartBtn${person}`).style.display = 'none';
-    document.getElementById('comparison').innerText = ''; // Limpiar el contenido del porcentaje
-    document.querySelector('.image-container').style.display = 'block'; // Mostrar la imagen
-    document.getElementById(`waiting${person}`).style.display = 'none'; // Ocultar mensaje de espera
-    localStorage.removeItem(`answers${person}`);
-    localStorage.removeItem(`name${person}`);
-    clearTable();
-    hideResults();
-    clearInterval(waitingInterval);
+    window.location.href = "index.html";
 }
-/*
-function showComparison() {
-    const answers1 = JSON.parse(localStorage.getItem('answers1'));
-    const answers2 = JSON.parse(localStorage.getItem('answers2'));
-    const name1 = localStorage.getItem('name1');
-    const name2 = localStorage.getItem('name2');
-    let correctCount = 0;
 
-    answers1.forEach((answer, index) => {
-        if (answer === answers2[index]) {
-            correctCount++;
-        }
-    });
-
-    const percentage = (correctCount / questions.length) * 100;
-    document.getElementById('comparison').innerText = `${name1} y ${name2} son compatibles en un ${percentage}% (${correctCount} de ${questions.length})`;
-}
-*/
 function showComparison() {
     const answers1 = JSON.parse(localStorage.getItem('answers1'));
     const answers2 = JSON.parse(localStorage.getItem('answers2'));
@@ -130,12 +99,12 @@ function showComparison() {
     const formattedPercentage = percentage % 1 === 0 ? percentage.toFixed(0) : percentage.toFixed(1);
     document.getElementById('comparison').innerText = `${name1} y ${name2} son compatibles en un ${formattedPercentage}% (${correctCount} de ${questions.length})`;
 }
+
 function fillTable() {
     const table = document.getElementById('answersTable');
     const answers1 = JSON.parse(localStorage.getItem('answers1'));
     const answers2 = JSON.parse(localStorage.getItem('answers2'));
 
-    // Limpiar tabla antes de llenarla
     clearTable();
 
     questions.forEach((question, index) => {
@@ -171,10 +140,6 @@ function updateData() {
         alert('Esperando a que ambas personas completen la encuesta.');
     }
 }
-/*
-function compareData() {
-    showComparison();
-}*/
 
 function hideWaiting() {
     document.getElementById('waiting1').style.display = 'none';
@@ -196,7 +161,7 @@ function startWaitingTimer(person) {
         timeLeft--;
         if (timeLeft <= 0) {
             clearInterval(waitingInterval);
-            updateData(); // Actualizar automáticamente al finalizar el temporizador
+            updateData();
         } else {
             waitingElement.innerText = `Esperando a que la otra persona termine la encuesta... (${timeLeft}s)`;
         }
@@ -209,7 +174,6 @@ window.onload = () => {
     answers[person - 1] = [];
     hideResults();
 };
-
 
 function printResults() {
     const name1 = localStorage.getItem('name1');
@@ -225,6 +189,7 @@ function printResults() {
     newWindow.document.body.innerHTML = content;
     newWindow.print();
 }
+
 function compareData() {
     showComparison();
     const name1 = localStorage.getItem('name1');
